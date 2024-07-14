@@ -20,3 +20,6 @@ def tweak_df(df: pl.DataFrame, columns_transformations: list, schema: dict) -> p
   # aplicación de funciones para el df
   # acepta lista de expresiones
   return df.with_columns(columns_transformations).cast(schema)
+
+def dict_to_df(dict):
+    return pl.from_dict(dict)
