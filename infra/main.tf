@@ -10,15 +10,15 @@ terraform {
 }
 
 provider "aws" {
-  region  = var.region 
+  region = var.region
 }
 
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = var.s3_name 
+  bucket = var.s3_name
 
   tags = {
-    Name        = var.s3_name 
+    Name        = var.s3_name
     Environment = "Dev"
   }
 }
